@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 const Login = () => {
   return (
     <Container>
-        <Row className='mt-5'>
+        <Row className='mt-5' style={{minHeight:'68vh', maxWidth:'100%'}}>
             <Col className='justify-content-end' >
             <Form className='form-login'>
                 <h4 className='text-center'>Login</h4>

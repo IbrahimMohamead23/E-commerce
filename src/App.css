@@ -1,8 +1,13 @@
 
 
+.App{
+  /* background-color: black;
+  color: white; */
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+ 
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -58,7 +63,7 @@
   padding: 5px;
   background-color: rgba(248, 253, 252, 0.863);
   /* color: white; */
-  width: 400px;
+  width: 350px;
   margin: 50px auto;
   box-shadow: 1px 2px 2px 4px rgba(224, 228, 227, 0.863);
 }
@@ -82,5 +87,16 @@
 @media screen and (max-width: 600px) {
   .mopill{
     color: red;
+    
   }
+}
+
+.footers{
+  background-color: #ebeaea;
+ margin: 15px 0 0 0;
+ 
+}
+
+.card-detals{
+  min-height: 67vh;
 }

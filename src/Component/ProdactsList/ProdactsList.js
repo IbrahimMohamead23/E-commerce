@@ -37,26 +37,34 @@ const ProdactsList = () => {
 
 
   return (
-    <div className='my-3'>
+    // <div className='my-3'>
+    <>
         {/* <h2 className='text-center'>Prodactes </h2> */}
+           
+          
+           {/* <div className='d-flex justify-content-center mb-3'>
+              <Button>aaaaa</Button>
+              <Button>bbbbb</Button>
+              <Button>cccc</Button>
+              <Button>dddddd</Button>
+           </div> */}
 
-        <Row className='mopill'>
-            <Col className='catgory-list'>
-                <Button variant="outline-dark"  onClick={() => getAllProdacts()}>All</Button>
-            {
-                catagory.map(item => {
+         <Row className='d-flex justify-content-center mb-3' xs='5'>
+           <Button variant="outline-dark"  onClick={() => getAllProdacts()}>All</Button>
+
+              {
+                 catagory.map(item => {
                     return(
-                        <Row>
-                                <Button variant="outline-dark" key={item} onClick={() =>  getInCatgory(item)}>{item}</Button>  
-
-                        </Row>
+                         <Button variant="outline-dark" key={item} onClick={() =>  getInCatgory(item)}>{item}</Button>  
+            
                     )
                 })
-             }
-            </Col>
-        </Row> 
+              }
+           </Row>
+        
 
         <Row xs='1' md='2' lg='3' >
+       
            
            { 
             prodact.map(item => {
@@ -71,7 +79,7 @@ const ProdactsList = () => {
           
         </Row>
 
-    </div>
+    </>
   )
 }
 

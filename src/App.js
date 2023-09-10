@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 import NavComponent from './Component/Navbar/NavComponent';
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './Component/HomePage/HomePage';
@@ -7,7 +8,10 @@ import Login from './Component/Login/Login';
 import Rejestar from './Component/Login/Rejestar';
 import Cart from './Component/Cart/Cart';
 import AllProduct from './Component/ProdactsList/AllProduct';
-import About from './Component/HomePage/About';
+import Footer from './Component/Footer/Footer';
+
+// import About from './Component/HomePage/About';
+const LazeLoding = React.lazy(() => import('./Component/HomePage/About'));
 
 
 const App = () => {
@@ -22,11 +26,17 @@ const App = () => {
           <Route path='/prodact/:prodactId' element={<ProdactDetalse/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/rejestar' element={<Rejestar/>}/>
-          <Route path='/about' element={<About/>}/>
+          <Route path='/about' element={
+          <React.Suspense fallback={<h1 className='text-center'>Loding...</h1>}>
+             <LazeLoding/>
+          </React.Suspense>
+          }/>
         
        </Routes>
 
+       <Footer/>
        <Cart/>
+
     </div>
   );
 }

@@ -69,7 +69,7 @@ const ProdactDetalse = () => {
 
   const ShowProduct = () => {
     return(
-      <>
+      <Row className='card-detals'>
           <Col md='6'>
                  <img src={product.image} alt='img-items' style={{width:'350px', height:'350px'}} />
             </Col>
@@ -98,7 +98,7 @@ const ProdactDetalse = () => {
 
             {/* <Button>tisting</Button> */}
 
-      </>
+      </Row>
     )
   }
  
